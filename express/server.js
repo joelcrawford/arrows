@@ -9,6 +9,5 @@ app.get("/", function (req, res) {
   res.sendfile("public/index.html");
 });
 
-//app.listen(80, () => console.log("Gator app listening on port 80!"));
-
+module.exports = app;
 module.exports.handler = serverless(app);

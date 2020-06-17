@@ -10,12 +10,18 @@ router.get("/", (_, res) => {
   res.sendFile("../public/index.html", { root: __dirname });
 });
 
+// router.get("/", (_, res) => {
+//   res.writeHead(200, { "Content-Type": "text/html" });
+//   res.write("<h1>Hello from Express.js!</h1>");
+//   res.end();
+// });
+
 // app.get("/", function (_, res) {
 //   res.sendFile("public/index.html", { root: __dirname });
 // });
 
 app.use(bodyParser.json());
-app.use("/", express.static(path.join(__dirname, "..", "public")));
+app.use("/public", express.static(path.join(__dirname, "..", "public")));
 app.use("/.netlify/functions/server", router); // path must route to lambda
 console.log(router.stack[0]);
 // app.use("/", (_, res) =>

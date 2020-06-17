@@ -9,7 +9,7 @@ app.use("/model", express.static(path.join(__dirname, "..", "public")));
 app.use("/", router);
 
 app.use("/.netlify/functions/server", router); // path must route to lambda
-app.use("/model", (_, res) =>
+app.use("/", (_, res) =>
   res.sendFile(path.join(__dirname, "../public/index_2.html"))
 );
 module.exports = app;

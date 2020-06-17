@@ -7,7 +7,7 @@ router.get("/", (_, res) => {
   res.end();
 });
 
-router.get("/public", (_, res) => {
+router.get("/model", (_, res) => {
   res.sendFile(path.join(__dirname, "..", "/public", "index.html"));
 });
 

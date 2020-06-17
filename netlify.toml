@@ -3,7 +3,14 @@
   functions = "functions"
 
 [[redirects]]
-  from = "/*"
+  from = "/model"
   to = "/.netlify/functions/server"
   status = 200
   force = false
+
+[[redirects]]
+  from = "/"
+  to = "/public/index.html"
+  status = 200
+  force = false
+

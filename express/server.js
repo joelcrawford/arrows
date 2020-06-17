@@ -1,12 +1,13 @@
 "use strict";
 const express = require("express");
 const serverless = require("serverless-http");
+const path = require("path");
 const app = express();
 
-app.use(express.static("public"));
+app.use("/", express.static(path.join(__dirname, "..", "public")));
 
-app.get("/", function (req, res) {
-  res.sendfile("public/index.html");
+app.get("/", function (_, res) {
+  res.sendFile("public/index.html", { root: __dirname });
 });
 
 module.exports = app;

@@ -3,9 +3,27 @@
   functions = "functions"
 
 [[redirects]]
-  from = "/"
-  to = "/public/index.html"
-  status = 200
-  ## force = false
-  ## query = {path = ":path"}
-  ## conditions = {Language = ["en"], Country = ["US"], Role = ["admin"]}
+from = "/public/index.html"
+to = "/"
+status = 200
+force = false
+[[redirects]]
+from = "/public/geometry/"
+to = "/geometry/"
+status = 200
+force = false
+[[redirects]]
+from = "/public/img/"
+to = "/img/"
+status = 200
+force = false
+[[redirects]]
+from = "/public/lib/"
+to = "/lib/"
+status = 200
+force = false
+[[redirects]]
+from = "/public/style/"
+to = "/style/"
+status = 200
+force = false

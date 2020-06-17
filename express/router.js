@@ -7,8 +7,8 @@ router.get("/", (_, res) => {
   res.end();
 });
 
-router.get("/model", (_, res) => {
-  res.sendFile(path.join(__dirname, "..", "/public", "index.html"));
-});
+// router.get("/model", (_, res) => {
+//   res.sendFile(path.join(__dirname, "..", "/public", "index.html"));
+// });
 
 module.exports = router;

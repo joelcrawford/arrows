@@ -5,7 +5,7 @@ const path = require("path");
 const app = express();
 const router = require("./router");
 
-app.use("/model", express.static(path.join(__dirname, "..", "public")));
+//app.use("/model", express.static(path.join(__dirname, "..", "public")));
 app.use("/", router);
 
 app.use("/.netlify/functions/server", router); // path must route to lambda

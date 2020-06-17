@@ -3,8 +3,8 @@
   functions = "functions"
 
 [[redirects]]
-  from = "/public/index.html"
-  to = "/"
+  from = "/"
+  to = "/public/index.html"
   status = 200
   ## force = false
   ## query = {path = ":path"}
